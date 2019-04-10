@@ -1,0 +1,22 @@
+# # # # # # # # # # # # # # # # # # Server Start # # # # # # # # # # # # # # # # # #
+server:
+  port: 8080
+# # # # # # # # # # # # # # # # # # Server End # # # # # # # # # # # # # # # # # #
+
+# # # # # # # # # # # # # # # # # # Spring Start # # # # # # # # # # # # # # # # # #
+spring:
+  # 配置应用
+  application:
+    # 应用名称
+    name: aop-log
+# # # # # # # # # # # # # # # # # # Spring End # # # # # # # # # # # # # # # # # #
+
+# # # # # # # # # # # # # # # # # # Logback Start # # # # # # # # # # # # # # # # # #
+logging:
+  # 生成文件路径
+  #  path: /log
+  # 生成日志文件名称
+  #  file: logInfo
+  # 加载本地配置文件
+  config: classpath:logback-spring.xml
+# # # # # # # # # # # # # # # # # # Logback Start # # # # # # # # # # # # # # # # # #

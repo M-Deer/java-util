@@ -1,0 +1,37 @@
+# # # # # # # # # # # # # # # # # # Server Start # # # # # # # # # # # # # # # # # #
+server:
+  port: 8080
+# # # # # # # # # # # # # # # # # # Server End # # # # # # # # # # # # # # # # # #
+
+# # # # # # # # # # # # # # # # # # Spring Start # # # # # # # # # # # # # # # # # #
+spring:
+  # 配置应用
+  application:
+    # 应用名称
+    name: java-util
+
+  # 配置静态文件资源
+  mvc:
+    static-path-pattern: /static/**
+    throw-exception-if-no-handler-found: true
+
+  # 配置thymeleaf
+  thymeleaf:
+    prefix: classpath:/static/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+    cache: false
+# # # # # # # # # # # # # # # # # # Spring End # # # # # # # # # # # # # # # # # #
+
+# # # # # # # # # # # # # # # # # # Logback Start # # # # # # # # # # # # # # # # # #
+logging:
+  # 生成文件路径
+#  path: /log
+  # 生成日志文件名称
+#  file: logInfo
+  # 加载本地配置文件
+  config: classpath:logback-spring.xml
+# # # # # # # # # # # # # # # # # # Logback Start # # # # # # # # # # # # # # # # # #
