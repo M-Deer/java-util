@@ -1,5 +1,6 @@
 package com.deer.service;
 
+import com.deer.component.annotation.OtherLog;
 import com.deer.model.User;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService {
 
+    @OtherLog
     public String getItemById(Integer id) {
         String str = "收到请求！学生ID：" + id;
         System.out.println(str);

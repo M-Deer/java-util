@@ -1,4 +1,4 @@
-package com.deer.component;
+package com.deer.util;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;

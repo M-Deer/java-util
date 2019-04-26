@@ -13,23 +13,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <!-- 项目描述 -->
-    <artifactId>aop-log</artifactId>
+    <artifactId>global-exception</artifactId>
     <groupId>com.deer</groupId>
-    <name>aop-log</name>
+    <name>global-exception</name>
     <packaging>jar</packaging>
-    <description>This project for AOP Log</description>
-
-
-    <!-- 依赖项 -->
-    <dependencies>
-
-        <!-- spring-boot-starter-aop -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-aop</artifactId>
-        </dependency>
-
-    </dependencies>
-
+    <description>This project for Global Exception</description>
 
 </project>

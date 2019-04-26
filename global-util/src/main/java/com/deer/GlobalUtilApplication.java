@@ -1,6 +1,6 @@
 package com.deer;
 
-import com.deer.component.GlobalUtil;
+import com.deer.util.GlobalSpringUtil;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -15,7 +15,7 @@ public class GlobalUtilApplication {
         // 获取上下文
         ConfigurableApplicationContext applicationContext = SpringApplication.run(GlobalUtilApplication.class, args);
         // 设置上下文
-        GlobalUtil.setApplicationContext(applicationContext);
+        GlobalSpringUtil.setApplicationContext(applicationContext);
     }
 
 }

@@ -1,6 +1,5 @@
-package com.deer.component;
+package com.deer.util;
 
-import org.springframework.context.ApplicationContext;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
@@ -17,9 +16,6 @@ import java.util.function.Predicate;
  * @Description: 全局通用工具类
  */
 public class GlobalUtil {
-
-    // 全局上下文
-    private static ApplicationContext applicationContext;
 
     /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = Common Start = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
@@ -102,63 +98,4 @@ public class GlobalUtil {
     }
 
     /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = HttpServlet End = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
-
-    /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ApplicationContext Start = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
-
-    /**
-     * 设置当前上下文
-     *
-     * @param applicationContext 上下文
-     */
-    public static void setApplicationContext(ApplicationContext applicationContext) {
-        if (isEmpty(GlobalUtil.applicationContext))
-            GlobalUtil.applicationContext = applicationContext;
-    }
-
-    /**
-     * 获取当前上下文
-     *
-     * @return ApplicationContext
-     */
-    public static ApplicationContext getApplicationContext() {
-        return applicationContext;
-    }
-
-    /**
-     * 根据名称返回 Bean
-     *
-     * @param beanName 名称
-     * @return Bean
-     */
-    public static Object getBean(String beanName) {
-        return getApplicationContext().getBean(beanName);
-    }
-
-    /**
-     * 根据 Class 返回 Bean
-     *
-     * @param clazz 类型
-     * @return Bean
-     */
-    public static <T> T getBean(Class<T> clazz) {
-        return getApplicationContext().getBean(clazz);
-    }
-
-    /**
-     * 通过 Name,以及 Clazz 返回指定的 Bean
-     *
-     * @param beanName 名称
-     * @param clazz    类型
-     * @return Bean
-     */
-    public static <T> T getBean(String beanName, Class<T> clazz) {
-        return getApplicationContext().getBean(beanName, clazz);
-    }
-
-    /**
-     * 如果使用以上方式在 Springboot 中上下文需要在启动类中添加一段代码
-     * 设置上下文：
-     * 		GlobalUtil.setApplicationContext(applicationContext);
-     */
-    /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ApplicationContext End = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 }

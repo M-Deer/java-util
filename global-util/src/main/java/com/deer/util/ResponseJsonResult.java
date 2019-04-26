@@ -1,4 +1,4 @@
-package com.deer.component;
+package com.deer.util;
 
 import lombok.Data;
 
