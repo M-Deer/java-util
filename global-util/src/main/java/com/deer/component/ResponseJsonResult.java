@@ -1,3 +1,5 @@
+package com.deer.component;
+
 import lombok.Data;
 
 import java.io.Serializable;

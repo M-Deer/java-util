@@ -1,6 +1,6 @@
-package com.example.service;
+package com.deer.service;
 
-import com.example.model.User;
+import com.deer.model.User;
 import org.springframework.stereotype.Service;
 
 /**

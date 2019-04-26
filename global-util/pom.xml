@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <parent>
         <artifactId>java-util</artifactId>
         <groupId>com.parent</groupId>
@@ -10,29 +10,17 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>aop-log</artifactId>
+    <artifactId>global-util</artifactId>
     <groupId>com.deer</groupId>
-    <name>aop-log</name>
+    <name>global-util</name>
     <packaging>jar</packaging>
-    <description>This project for AOP Log</description>
+    <description>This project for Global Util</description>
 
-
-    <!-- 依赖项 -->
     <dependencies>
-
         <!-- spring-boot-starter-web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
-        <!-- spring-boot-starter-aop -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-aop</artifactId>
-        </dependency>
-
     </dependencies>
-
-
 </project>

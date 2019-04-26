@@ -1,7 +1,7 @@
-package com.example.controller;
+package com.deer.controller;
 
-import com.example.model.User;
-import com.example.service.UserService;
+import com.deer.model.User;
+import com.deer.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

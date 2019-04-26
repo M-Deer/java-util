@@ -1,4 +1,4 @@
-package com.example.component.annotation;
+package com.deer.component.annotation;
 
 import java.lang.annotation.*;
 

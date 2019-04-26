@@ -1,4 +1,4 @@
-package com.example.component.aop;
+package com.deer.component.aop;
 
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
@@ -26,7 +26,7 @@ import java.util.Objects;
 public class ControllerLogAspect {
 
     //切点入口 controller包下面所有类的所有方法
-    private final String pointcut = "execution(* com.example.controller..*(..))";
+    private final String pointcut = "execution(* com.deer.controller..*(..))";
 
     //切点
     @Pointcut(value = pointcut)
