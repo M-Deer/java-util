@@ -1,0 +1,22 @@
+# Test-Utl: localhost:8080/global_exception/test
+
+# # # # # # # # # # # # # # # # # # Server Start # # # # # # # # # # # # # # # # # #
+server:
+  port: 8080
+  servlet:
+    context-path: /global_exception
+# # # # # # # # # # # # # # # # # # Server End # # # # # # # # # # # # # # # # # #
+
+# # # # # # # # # # # # # # # # # # Spring Start # # # # # # # # # # # # # # # # # #
+spring:
+  # 配置应用
+  application:
+    # 应用名称
+    name: aop-log
+# # # # # # # # # # # # # # # # # # Spring End # # # # # # # # # # # # # # # # # #
+
+# # # # # # # # # # # # # # # # # # Logback Start # # # # # # # # # # # # # # # # # #
+logging:
+  # 加载本地配置文件
+  config: classpath:logback-spring.xml
+# # # # # # # # # # # # # # # # # # Logback Start # # # # # # # # # # # # # # # # # #

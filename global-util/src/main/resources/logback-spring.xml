@@ -24,9 +24,34 @@
         </encoder>
     </appender>
 
+    <!-- 日志输出到指定文件 -->
+    <appender name="FILE_LOG" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <!--<level>WARN</level>-->
+            <onMatch>DENY</onMatch>
+            <onMismatch>ACCEPT</onMismatch>
+        </filter>
+        <encoder>
+            <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <!-- 滚动策略，按照日期每天生成 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>
+                ${LOG_PATH}/${LOG_FILE}-%d.log
+            </fileNamePattern>
+            <MaxHistory>30</MaxHistory>
+        </rollingPolicy>
+    </appender>
+
+     打印 sql
+    <logger name="com.spdb.mapper" level="DEBUG"/>
+    <logger name="com.baomidou.dynamic" level="DEBUG"/>
+
     <!-- 日志输出级别 -->
     <root level="info">
         <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE_LOG"/>
     </root>
 
 </configuration>
