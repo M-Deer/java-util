@@ -23,6 +23,12 @@
     <!-- 依赖项 -->
     <dependencies>
 
+        <!-- spring-boot-starter-web -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
         <!-- spring-boot-starter-aop -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

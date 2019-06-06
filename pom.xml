@@ -14,13 +14,15 @@
         <module>global-exception</module>
     </modules>
 
+    <!-- boot parent -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.4.RELEASE</version>
+        <version>2.1.5.RELEASE</version>
         <relativePath/>
     </parent>
 
+    <!-- description -->
     <groupId>com.parent</groupId>
     <artifactId>java-util</artifactId>
     <version>1.0-SNAPSHOT</version>
@@ -32,24 +34,15 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reportiong.outputEncoding>UTF-8</project.reportiong.outputEncoding>
         <java.version>1.8</java.version>
+
         <!-- 版本管理 -->
+        <spring-boot-starter-component.version>2.1.5.RELEASE</spring-boot-starter-component.version>
         <fastjson.version>1.2.58</fastjson.version>
         <lombok.version>1.18.8</lombok.version>
     </properties>
 
     <!-- 依赖项 -->
     <dependencies>
-        <!-- spring-boot-starter -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
-
-        <!-- spring-boot-starter-web -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
 
         <!-- spring-boot-starter-test -->
         <dependency>
@@ -74,6 +67,33 @@
         </dependency>
 
     </dependencies>
+
+    <!-- 依赖管理 -->
+    <dependencyManagement>
+        <dependencies>
+
+            <!-- spring-boot-starter -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter</artifactId>
+                <version>${spring-boot-starter-component.version}</version>
+            </dependency>
+            <!-- spring-boot-starter-aop -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-aop</artifactId>
+                <version>${spring-boot-starter-component.version}</version>
+            </dependency>
+            <!-- spring boot web -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot-starter-component.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
 
     <build>
         <!-- 插件项 -->

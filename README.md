@@ -7,7 +7,8 @@
 
 - global-exception: controller 全局的异常处理
 
-- global-util：Java 项目开发中常用到的工具类（不需要启动项目，都是一些静态使用的，只是用来汇总而已）
+- global-util：Java 项目开发中常用到的工具类（不需要启动项目，都是一些静态使用的，只是用来汇总而已,
+虽然不需要 spring boot 启动，但需要他支持，其中有一个是获取上下文的工具类）
 工具类都存放在 _com.deer.util_  包下
     - GlobalUtil：全局工具类
     - GlobalDateUtil：时间工具类
