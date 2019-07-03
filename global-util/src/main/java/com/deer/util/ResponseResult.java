@@ -12,7 +12,7 @@ import java.util.Date;
  * @Description: 系统返回 json 结果封装类
  */
 @Data
-public class ResponseResult implements Serializable {
+public class ResponseResult<T> implements Serializable {
 
     private static final long serialVersionUID = 7883830277373687855L;
 
@@ -31,7 +31,7 @@ public class ResponseResult implements Serializable {
     /**
      * 结果对象
      */
-    private Object data;
+    private T data;
 
     /**
      * 响应时间
@@ -45,8 +45,8 @@ public class ResponseResult implements Serializable {
      * @param data 携带对象
      * @return 封装结果
      */
-    public static ResponseResult successResult(Object data) {
-        ResponseResult responseResult = new ResponseResult();
+    public static <F> ResponseResult successResult(F data) {
+        ResponseResult<F> responseResult = new ResponseResult<>();
         responseResult.setStatus("1");
         responseResult.setMessage("操作成功");
         responseResult.setData(data);
@@ -62,8 +62,8 @@ public class ResponseResult implements Serializable {
      * @param successMessage 成功提示信息
      * @return 封装结果
      */
-    public static ResponseResult successResult(String successMessage) {
-        ResponseResult responseResult = new ResponseResult();
+    public static <F> ResponseResult successResult(String successMessage) {
+        ResponseResult<F> responseResult = new ResponseResult<>();
         responseResult.setStatus("1");
         responseResult.setMessage(successMessage);
         responseResult.setData(null);
@@ -77,11 +77,11 @@ public class ResponseResult implements Serializable {
      * 携带消息、对象
      *
      * @param successMessage 成功提示信息
-     * @param data         携带对象
+     * @param data           携带对象
      * @return 封装结果
      */
-    public static ResponseResult successResult(String successMessage, Object data) {
-        ResponseResult responseResult = new ResponseResult();
+    public static <F> ResponseResult successResult(String successMessage, F data) {
+        ResponseResult<F> responseResult = new ResponseResult<>();
         responseResult.setStatus("1");
         responseResult.setMessage(successMessage);
         responseResult.setData(data);
@@ -97,8 +97,8 @@ public class ResponseResult implements Serializable {
      * @param data 携带对象
      * @return 封装结果
      */
-    public static ResponseResult unsuccessResult(Object data) {
-        ResponseResult responseResult = new ResponseResult();
+    public static <F> ResponseResult unsuccessResult(F data) {
+        ResponseResult<F> responseResult = new ResponseResult<>();
         responseResult.setStatus("-1");
         responseResult.setMessage("操作失败");
         responseResult.setData(data);
@@ -114,8 +114,8 @@ public class ResponseResult implements Serializable {
      * @param errorMessage 失败提示信息
      * @return 封装结果
      */
-    public static ResponseResult unsuccessResult(String errorMessage) {
-        ResponseResult responseResult = new ResponseResult();
+    public static <F> ResponseResult unsuccessResult(String errorMessage) {
+        ResponseResult<F> responseResult = new ResponseResult<>();
         responseResult.setStatus("-1");
         responseResult.setMessage(errorMessage);
         responseResult.setData(null);
@@ -129,11 +129,11 @@ public class ResponseResult implements Serializable {
      * 携带消息、对象
      *
      * @param errorMessage 失败提示信息
-     * @param data       携带对象
+     * @param data         携带对象
      * @return 封装结果
      */
-    public static ResponseResult unsuccessResult(String errorMessage, Object data) {
-        ResponseResult responseResult = new ResponseResult();
+    public static <F> ResponseResult unsuccessResult(String errorMessage, F data) {
+        ResponseResult<F> responseResult = new ResponseResult<>();
         responseResult.setStatus("-1");
         responseResult.setMessage(errorMessage);
         responseResult.setData(data);
