@@ -36,7 +36,7 @@
         <java.version>1.8</java.version>
 
         <!-- 版本管理 -->
-        <spring-boot-starter-component.version>2.1.5.RELEASE</spring-boot-starter-component.version>
+        <spring-boot-starter-component.version>2.5.12</spring-boot-starter-component.version>
         <fastjson.version>1.2.58</fastjson.version>
         <lombok.version>1.18.8</lombok.version>
     </properties>
